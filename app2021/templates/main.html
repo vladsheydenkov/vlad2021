@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+
+{% block title %} Input {{num_of_the_latest_materaial}} {% endblock %}
+
+{% block content %}
+        <form action="." method="post">
+                {{ form.as_p }}
+                {% csrf_token %}
+                <input type="submit" value="Input">
+        </form>
+        <a href="{% url 'task_app:all_materials' %}">show all materials</a>
+
+{% endblock %}
